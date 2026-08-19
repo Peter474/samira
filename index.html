@@ -17,11 +17,13 @@
   --ff-body:    'DM Sans', sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
 body{
   font-family:var(--ff-body);
   background:var(--cream);
   color:var(--ink);
+  overflow-x:hidden;
+  width:100%;
 }
 img{display:block;max-width:100%}
 button{font-family:var(--ff-body);cursor:pointer}
@@ -71,10 +73,11 @@ section{padding:5rem 1.5rem}
 
 /* HERO */
 #hero{
-  min-height:80vh;
+  min-height:80vh;min-height:80svh;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   text-align:center;background:var(--ink);color:#fff;
+  padding:2rem 1.5rem;
 }
 .hero-to{
   font-weight:400;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;
@@ -230,10 +233,28 @@ section{padding:5rem 1.5rem}
 }
 
 @media(max-width:600px){
-  section{padding:3.5rem 1rem}
-  .letter-paper{padding:2rem 1.4rem}
-  .lp-dear{font-size:1.9rem}
-  .reason-card{padding:2rem 1.4rem}
+  section{padding:3rem 1.2rem}
+  #hero{min-height:90vh;min-height:90svh;padding:2rem 1.2rem}
+  .hero-tagline{padding:0 .5rem}
+  .letter-paper{padding:1.8rem 1.2rem}
+  .lp-dear{font-size:1.7rem}
+  .lp-body{font-size:1rem;line-height:1.8}
+  .reason-card{padding:1.8rem 1.2rem}
+  .reason-title{font-size:1.3rem}
+  .reason-body{font-size:.88rem}
+  .carousel-wrap{max-width:100%}
+  .car-btn{width:34px;height:34px;font-size:1.1rem}
+  .promise-items{gap:.5rem}
+  .promise-item{font-size:.75rem;padding:.45rem .9rem}
+  .final-heart-btn{padding:.85rem 1.6rem;font-size:.78rem;white-space:normal;text-align:center}
+  .lock-name{font-size:2.6rem}
+  .lock-btn{padding:.85rem 1.8rem;font-size:.8rem}
+  .big-title{font-size:clamp(1.7rem,7vw,2.2rem)}
+}
+@media(max-width:380px){
+  .hero-script{font-size:3.4rem}
+  .final-script{font-size:2.6rem}
+  .lock-name{font-size:2.2rem}
 }
 </style>
 </head>
